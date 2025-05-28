@@ -14,7 +14,7 @@
         "interface/stlink.cfg",
         "target/stm32f4x.cfg"
       ],
-      "svdFile": "D:/ontapSTM32/RCC/STM32F411.svd",
+      "svdFile": "D:/git_eg/RCC/STM32F411.svd",
       "preLaunchTask": "build",
       "postLaunchCommands": [
         "load",
