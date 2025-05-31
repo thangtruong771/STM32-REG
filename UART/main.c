@@ -4,7 +4,6 @@ void UART_Init();
 void Send_data(char data);
 void Send_str(const char* data);
 uint8_t Receive_data();
-char temp=0;
 char buffer_rx[32]={0};
 void DMA_ReceiveData_Init();
 void DMA1_Stream5_IRQHandler();
@@ -13,8 +12,6 @@ int main(){
     UART_Init();
     DMA_ReceiveData_Init();
     Send_str("Im Thang, I'm from PTIT");
-  
-
     while(1)
     {
         
