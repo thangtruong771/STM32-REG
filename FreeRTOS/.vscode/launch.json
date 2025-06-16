@@ -1,0 +1,28 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug STM32 with OpenOCD",
+      "type": "cortex-debug",
+      "request": "launch",
+      "servertype": "openocd",
+      "cwd": "${workspaceFolder}",
+      "executable": "${workspaceFolder}/build/freeRTOS_proj.elf",
+      "interface": "swd",
+      "serverpath": "D:/OpenOCD-20240904-0.12.0/bin/openocd.exe",
+      "configFiles": [
+        "interface/stlink.cfg",
+        "target/stm32f4x.cfg"
+      ],
+      "searchDir": ["D:/git_eg/I2C"],
+      "svdFile": "D:/git_eg/I2C/STM32F411.svd",
+      "preLaunchTask": "build",
+      "postLaunchCommands": [
+        "load",
+        "break main",
+        "continue"
+      ],
+      "showDevDebugOutput": "raw"
+    }
+  ]
+}
